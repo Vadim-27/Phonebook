@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getFilter } from 'redux/filter/filter-selectors';
 import { setFilter } from 'redux/filter/filter-slice';
-import css from './myContactFilter.module.css';
+import css from './myContactFilter.module.scss';
 
 const ContactFilter = () => {
   const dispatch = useDispatch();
@@ -11,9 +11,10 @@ const ContactFilter = () => {
   };
 
   return (
-    <div className={css.filterBox}>
-      <label>
-        Find contacts by name
+    <div  className={css.wrapper}>
+      <label className={css.filterBox}>
+        <p className={css.label}>Find contacts by name</p>
+
         <input
           className={css.myFormInput}
           type="text"

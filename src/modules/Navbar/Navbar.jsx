@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 
 import items from "./items";
 import { isUserLogin } from "redux/auth/auth-selectors";
-import css from "./navbar.module.css"
+import css from "./navbar.module.scss"
 import NavbarAuth from "./NavbarAuth/NavbarAuth";
 import NavbarUser from "./NavbarUser/NavbarUser";
 
@@ -21,7 +21,7 @@ const Navbar = () => {
      ));
    
     return (
-      <div className={css.menu}>
+      <div className={`${css.menu} container`}>
         <ul className={css.menu}>{elements}</ul>
        
         {!isLogin && <NavbarAuth />}

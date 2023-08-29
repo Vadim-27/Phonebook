@@ -6,7 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { App } from 'App';
 import { store, persistor } from './redux/store';
 import AuthLayout from 'modules/AuthLayout/AuthLayout';
-import './index.css';
+import './index.scss';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

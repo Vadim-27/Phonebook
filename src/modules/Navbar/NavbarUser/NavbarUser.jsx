@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { logout } from "redux/auth/auth-operations";
 import { getUser } from "redux/auth/auth-selectors";
 
-import css from "./navbarUser.module.css"
+import css from "./navbarUser.module.scss"
 
 
 const NavbarUser = () => {
@@ -14,7 +14,8 @@ const NavbarUser = () => {
     }
     return (
       <div className={css.wrapper}>
-        {name},
+        <p className={css.userName}>{name},</p>
+        
         <button className={css.btnUserLog} onClick={onLogout}>
           Logout
         </button>

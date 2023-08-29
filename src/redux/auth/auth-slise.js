@@ -51,6 +51,7 @@ const authSlice = createSlice({
       })
       .addCase(current.fulfilled, (state, { payload }) => {
         const { name, email } = payload;
+        
         state.loading = false;
         state.user.name = name;
         state.user.email = email;

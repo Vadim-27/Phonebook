@@ -4,7 +4,7 @@ import TextField from 'shared/components/TextField/TextField';
 import Button from 'shared/components/Button/Button';
 import useForm from 'shared/hooks/useForm';
 
-import css from './loginForm.module.css';
+import css from './loginForm.module.scss';
 
 const LoginForm = ({ onSubmit }) => {
   const { state, handleChange, handleSubmit } = useForm({

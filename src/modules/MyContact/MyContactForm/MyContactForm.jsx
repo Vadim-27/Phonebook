@@ -4,7 +4,7 @@ import initialState from './initialState';
 import { useDispatch } from 'react-redux';
 import { getAllContacts } from 'redux/contacts/contacts-selectors';
 import { useSelector } from 'react-redux';
-import css from './myContactForm.module.css';
+import css from './myContactForm.module.scss';
 import { fetchAddContacts } from 'redux/contacts/contacts-operations';
 
 const MyContactForm = () => {
@@ -43,7 +43,9 @@ const MyContactForm = () => {
   const { name, number } = state;
   return (
     <form className={css.myForm} onSubmit={handleSubmint}>
-      <label htmlFor="">Name</label>
+      <label className={css.label} htmlFor="">
+        Name
+      </label>
       <input
         className={css.myFormInput}
         type="text"
@@ -55,7 +57,9 @@ const MyContactForm = () => {
         title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
         required
       />
-      <label htmlFor="">Number</label>
+      <label className={css.label} htmlFor="">
+        Number
+      </label>
       <input
         className={css.myFormInput}
         type="tel"

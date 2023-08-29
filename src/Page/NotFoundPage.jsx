@@ -1,9 +1,9 @@
-import css from './page.module.css';
+import css from './page.module.scss';
 
 
 const NotFoundPage = () => {
   return (
-    <div className={css.wrapper}>
+    <div className={`${css.wrapper} container`}>
       <p>Not Found Page</p>
     </div>
   ); 
